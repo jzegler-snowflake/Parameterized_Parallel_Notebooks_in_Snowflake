@@ -14,9 +14,9 @@ Simple example: calculate carbon emissions for different companies. Pass in a co
 |------|---------|
 | `01_setup_data.sql` | Creates tables and loads sample data |
 | `carbon_emissions_calculator.ipynb` | Jupyter notebook file (pull via Git integration) |
-| `03_create_notebook_project.sql` | Creates the notebook project |
-| `04_scheduled_task.sql` | Scheduled task setup for automated runs |
-| `05_manual_parallel_execution.sql` | Commands for parallel execution demo (2 companies) |
+| `02_create_notebook_project.sql` | Creates the notebook project |
+| `03_manual_parallel_execution.sql` | Commands for parallel execution demo (2 companies) |
+| `04_scheduled_task.sql` | Scheduled task setup (optional) |
 
 ## Setup
 
@@ -36,11 +36,11 @@ Run `01_setup_data.sql` to create:
 
 ### 3. Create Notebook Project
 
-Run `03_create_notebook_project.sql`
+Run `02_create_notebook_project.sql`
 
 ### 4. Update Workspace Hash
 
-In files `04_scheduled_task.sql` and `05_manual_parallel_execution.sql`, replace `<YOUR_WORKSPACE_HASH>` with your actual workspace hash from step 2.
+In files `03_manual_parallel_execution.sql` and `04_scheduled_task.sql`, replace `<YOUR_WORKSPACE_HASH>` with your actual workspace hash from step 2.
 
 ### 5. Test Execution
 
