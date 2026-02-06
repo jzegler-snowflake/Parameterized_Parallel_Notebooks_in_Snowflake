@@ -12,7 +12,7 @@ AS
     MAIN_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/carbon_emissions_calculator.ipynb'
     COMPUTE_POOL = 'SYSTEM_COMPUTE_POOL_CPU'
     QUERY_WAREHOUSE = 'CONTAINER_RUNTIME_WH'
-    RUNTIME = 'V2.2-CPU-PY3.11'
+    RUNTIME = 'V2.2-CPU-PY3.12'
     ARGUMENTS = 'TechCorp'
     REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
     EXTERNAL_ACCESS_INTEGRATIONS = ('MLOPS_PYPI_ACCESS_INTEGRATION');
@@ -28,7 +28,7 @@ AS
     MAIN_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/carbon_emissions_calculator.ipynb'
     COMPUTE_POOL = 'SYSTEM_COMPUTE_POOL_CPU'
     QUERY_WAREHOUSE = 'CONTAINER_RUNTIME_WH'
-    RUNTIME = 'V2.2-CPU-PY3.11'
+    RUNTIME = 'V2.2-CPU-PY3.12'
     ARGUMENTS = 'TechCorp'
     REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
     EXTERNAL_ACCESS_INTEGRATIONS = ('MLOPS_PYPI_ACCESS_INTEGRATION');
@@ -42,7 +42,7 @@ AS
     MAIN_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/carbon_emissions_calculator.ipynb'
     COMPUTE_POOL = 'SYSTEM_COMPUTE_POOL_CPU'
     QUERY_WAREHOUSE = 'CONTAINER_RUNTIME_WH'
-    RUNTIME = 'V2.2-CPU-PY3.11'
+    RUNTIME = 'V2.2-CPU-PY3.12'
     ARGUMENTS = 'ManufactureCo'
     REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
     EXTERNAL_ACCESS_INTEGRATIONS = ('MLOPS_PYPI_ACCESS_INTEGRATION');
