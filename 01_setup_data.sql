@@ -119,4 +119,8 @@ FROM COMPANY_ACTIVITY_DATA
 GROUP BY COMPANY_NAME
 ORDER BY COMPANY_NAME;
 
+-- View all data
+SELECT * FROM COMPANY_ACTIVITY_DATA;
+SELECT * FROM EMISSIONS_FACTORS;
+
 -- Next: Create the notebook from carbon_emissions_calculator.ipynb
