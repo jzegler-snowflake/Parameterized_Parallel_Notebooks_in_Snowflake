@@ -1,7 +1,6 @@
 # Python dependencies for carbon emissions notebook
 # Use with: REQUIREMENTS_FILE = 'requirements.txt'
+# Note: pandas, numpy, and snowflake-snowpark-python are pre-installed in Container Runtime
+# Only need to install additional packages not in the base image
 
-pandas==2.1.4
-numpy==1.24.3
-snowflake-snowpark-python==1.11.1
-tabulate==0.9.0
+tabulate
