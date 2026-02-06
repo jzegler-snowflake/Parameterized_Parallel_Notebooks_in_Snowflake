@@ -63,7 +63,7 @@ INSERT INTO EMISSIONS_FACTORS VALUES
 -- Sample Activity Data for 5 Companies
 
 -- Company 1: TechCorp (Software/Technology)
-INSERT INTO COMPANY_ACTIVITY_DATA VALUES
+INSERT INTO COMPANY_ACTIVITY_DATA (COMPANY_ID, COMPANY_NAME, ACTIVITY_TYPE, ACTIVITY_VALUE, UNIT, REPORTING_YEAR, SCOPE, DATA_SOURCE) VALUES
     ('TECH001', 'TechCorp', 'Purchased Electricity', 2500000, 'kWh', 2024, 'Scope 2', 'Utility Bills'),
     ('TECH001', 'TechCorp', 'Data Center Services', 1800000, 'kWh', 2024, 'Scope 3', 'Cloud Provider Reports'),
     ('TECH001', 'TechCorp', 'Business Travel - Air', 450000, 'km', 2024, 'Scope 3', 'Travel Management System'),
@@ -71,7 +71,7 @@ INSERT INTO COMPANY_ACTIVITY_DATA VALUES
     ('TECH001', 'TechCorp', 'Natural Gas Combustion', 85000, 'kWh', 2024, 'Scope 1', 'Utility Bills');
 
 -- Company 2: ManufactureCo (Manufacturing)
-INSERT INTO COMPANY_ACTIVITY_DATA VALUES
+INSERT INTO COMPANY_ACTIVITY_DATA (COMPANY_ID, COMPANY_NAME, ACTIVITY_TYPE, ACTIVITY_VALUE, UNIT, REPORTING_YEAR, SCOPE, DATA_SOURCE) VALUES
     ('MFG002', 'ManufactureCo', 'Natural Gas Combustion', 5200000, 'kWh', 2024, 'Scope 1', 'Utility Bills'),
     ('MFG002', 'ManufactureCo', 'Diesel Combustion', 125000, 'liter', 2024, 'Scope 1', 'Fuel Receipts'),
     ('MFG002', 'ManufactureCo', 'Company Vehicles', 285000, 'km', 2024, 'Scope 1', 'Fleet Management'),
@@ -79,7 +79,7 @@ INSERT INTO COMPANY_ACTIVITY_DATA VALUES
     ('MFG002', 'ManufactureCo', 'Waste to Landfill', 450000, 'kg', 2024, 'Scope 3', 'Waste Management Reports');
 
 -- Company 3: RetailCo (Retail)
-INSERT INTO COMPANY_ACTIVITY_DATA VALUES
+INSERT INTO COMPANY_ACTIVITY_DATA (COMPANY_ID, COMPANY_NAME, ACTIVITY_TYPE, ACTIVITY_VALUE, UNIT, REPORTING_YEAR, SCOPE, DATA_SOURCE) VALUES
     ('RET003', 'RetailCo', 'Purchased Electricity', 4200000, 'kWh', 2024, 'Scope 2', 'Utility Bills'),
     ('RET003', 'RetailCo', 'Purchased Heating', 320000, 'kWh', 2024, 'Scope 2', 'Utility Bills'),
     ('RET003', 'RetailCo', 'Company Vehicles', 650000, 'km', 2024, 'Scope 1', 'Fleet Management'),
@@ -87,7 +87,7 @@ INSERT INTO COMPANY_ACTIVITY_DATA VALUES
     ('RET003', 'RetailCo', 'Waste to Landfill', 285000, 'kg', 2024, 'Scope 3', 'Waste Management Reports');
 
 -- Company 4: HealthcarePlus (Healthcare)
-INSERT INTO COMPANY_ACTIVITY_DATA VALUES
+INSERT INTO COMPANY_ACTIVITY_DATA (COMPANY_ID, COMPANY_NAME, ACTIVITY_TYPE, ACTIVITY_VALUE, UNIT, REPORTING_YEAR, SCOPE, DATA_SOURCE) VALUES
     ('HC004', 'HealthcarePlus', 'Purchased Electricity', 3150000, 'kWh', 2024, 'Scope 2', 'Utility Bills'),
     ('HC004', 'HealthcarePlus', 'Natural Gas Combustion', 1250000, 'kWh', 2024, 'Scope 1', 'Utility Bills'),
     ('HC004', 'HealthcarePlus', 'Company Vehicles', 185000, 'km', 2024, 'Scope 1', 'Fleet Management'),
@@ -95,7 +95,7 @@ INSERT INTO COMPANY_ACTIVITY_DATA VALUES
     ('HC004', 'HealthcarePlus', 'Waste to Landfill', 125000, 'kg', 2024, 'Scope 3', 'Waste Management Reports');
 
 -- Company 5: FinanceGlobal (Financial Services)
-INSERT INTO COMPANY_ACTIVITY_DATA VALUES
+INSERT INTO COMPANY_ACTIVITY_DATA (COMPANY_ID, COMPANY_NAME, ACTIVITY_TYPE, ACTIVITY_VALUE, UNIT, REPORTING_YEAR, SCOPE, DATA_SOURCE) VALUES
     ('FIN005', 'FinanceGlobal', 'Purchased Electricity', 1850000, 'kWh', 2024, 'Scope 2', 'Utility Bills'),
     ('FIN005', 'FinanceGlobal', 'Data Center Services', 950000, 'kWh', 2024, 'Scope 3', 'Cloud Provider Reports'),
     ('FIN005', 'FinanceGlobal', 'Business Travel - Air', 1250000, 'km', 2024, 'Scope 3', 'Travel Management System'),
