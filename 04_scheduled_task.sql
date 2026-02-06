@@ -1,7 +1,4 @@
 -- Scheduled Task Example
--- Update <YOUR_WORKSPACE_HASH> with your workspace hash from the notebook file path
--- Example: If notebook path is snow://workspace/ABC123/carbon_emissions_calculator.ipynb
---          then YOUR_WORKSPACE_HASH = ABC123
 
 USE DATABASE DEMO_DB;
 USE SCHEMA PUBLIC;
@@ -12,12 +9,12 @@ CREATE OR REPLACE TASK CARBON_EMISSIONS_DAILY_TASK
   COMMENT = 'Daily emissions calculation'
 AS
   EXECUTE NOTEBOOK PROJECT DEMO_DB.PUBLIC.CARBON_EMISSIONS_PROJECT
-    MAIN_FILE = 'snow://workspace/<YOUR_WORKSPACE_HASH>/carbon_emissions_calculator.ipynb'
+    MAIN_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/carbon_emissions_calculator.ipynb'
     COMPUTE_POOL = 'SYSTEM_COMPUTE_POOL_CPU'
     QUERY_WAREHOUSE = 'CONTAINER_RUNTIME_WH'
     RUNTIME = 'V2.2-CPU-PY3.11'
     ARGUMENTS = 'TechCorp'
-    REQUIREMENTS_FILE = 'snow://workspace/<YOUR_WORKSPACE_HASH>/requirements.txt'
+    REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
     EXTERNAL_ACCESS_INTEGRATIONS = ('ALLOW_ALL_INTEGRATION');
 
 -- Alternative: One task per company
@@ -28,12 +25,12 @@ CREATE OR REPLACE TASK CARBON_EMISSIONS_TECHCORP
   COMMENT = 'TechCorp emissions'
 AS
   EXECUTE NOTEBOOK PROJECT DEMO_DB.PUBLIC.CARBON_EMISSIONS_PROJECT
-    MAIN_FILE = 'snow://workspace/<YOUR_WORKSPACE_HASH>/carbon_emissions_calculator.ipynb'
+    MAIN_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/carbon_emissions_calculator.ipynb'
     COMPUTE_POOL = 'SYSTEM_COMPUTE_POOL_CPU'
     QUERY_WAREHOUSE = 'CONTAINER_RUNTIME_WH'
     RUNTIME = 'V2.2-CPU-PY3.11'
     ARGUMENTS = 'TechCorp'
-    REQUIREMENTS_FILE = 'snow://workspace/<YOUR_WORKSPACE_HASH>/requirements.txt'
+    REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
     EXTERNAL_ACCESS_INTEGRATIONS = ('ALLOW_ALL_INTEGRATION');
 
 CREATE OR REPLACE TASK CARBON_EMISSIONS_MANUFACTURECO
@@ -42,12 +39,12 @@ CREATE OR REPLACE TASK CARBON_EMISSIONS_MANUFACTURECO
   COMMENT = 'ManufactureCo emissions'
 AS
   EXECUTE NOTEBOOK PROJECT DEMO_DB.PUBLIC.CARBON_EMISSIONS_PROJECT
-    MAIN_FILE = 'snow://workspace/<YOUR_WORKSPACE_HASH>/carbon_emissions_calculator.ipynb'
+    MAIN_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/carbon_emissions_calculator.ipynb'
     COMPUTE_POOL = 'SYSTEM_COMPUTE_POOL_CPU'
     QUERY_WAREHOUSE = 'CONTAINER_RUNTIME_WH'
     RUNTIME = 'V2.2-CPU-PY3.11'
     ARGUMENTS = 'ManufactureCo'
-    REQUIREMENTS_FILE = 'snow://workspace/<YOUR_WORKSPACE_HASH>/requirements.txt'
+    REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
     EXTERNAL_ACCESS_INTEGRATIONS = ('ALLOW_ALL_INTEGRATION');
 
 -- Resume to activate (tasks start as SUSPENDED)
