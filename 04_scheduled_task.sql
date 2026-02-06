@@ -9,12 +9,12 @@ CREATE OR REPLACE TASK CARBON_EMISSIONS_DAILY_TASK
   COMMENT = 'Daily emissions calculation'
 AS
   EXECUTE NOTEBOOK PROJECT DEMO_DB.PUBLIC.CARBON_EMISSIONS_PROJECT
-    MAIN_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/carbon_emissions_calculator.ipynb'
+    MAIN_FILE = 'carbon_emissions_calculator.ipynb'
     COMPUTE_POOL = 'SYSTEM_COMPUTE_POOL_CPU'
     QUERY_WAREHOUSE = 'CONTAINER_RUNTIME_WH'
     RUNTIME = 'V2.2-CPU-PY3.12'
     ARGUMENTS = 'TechCorp'
-    REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
+    REQUIREMENTS_FILE = 'requirements.txt'
     EXTERNAL_ACCESS_INTEGRATIONS = ('MLOPS_PYPI_ACCESS_INTEGRATION');
 
 -- Alternative: One task per company
@@ -25,12 +25,12 @@ CREATE OR REPLACE TASK CARBON_EMISSIONS_TECHCORP
   COMMENT = 'TechCorp emissions'
 AS
   EXECUTE NOTEBOOK PROJECT DEMO_DB.PUBLIC.CARBON_EMISSIONS_PROJECT
-    MAIN_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/carbon_emissions_calculator.ipynb'
+    MAIN_FILE = 'carbon_emissions_calculator.ipynb'
     COMPUTE_POOL = 'SYSTEM_COMPUTE_POOL_CPU'
     QUERY_WAREHOUSE = 'CONTAINER_RUNTIME_WH'
     RUNTIME = 'V2.2-CPU-PY3.12'
     ARGUMENTS = 'TechCorp'
-    REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
+    REQUIREMENTS_FILE = 'requirements.txt'
     EXTERNAL_ACCESS_INTEGRATIONS = ('MLOPS_PYPI_ACCESS_INTEGRATION');
 
 CREATE OR REPLACE TASK CARBON_EMISSIONS_MANUFACTURECO
