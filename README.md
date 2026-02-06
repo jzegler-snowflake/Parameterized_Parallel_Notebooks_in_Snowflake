@@ -58,18 +58,22 @@ EXECUTE NOTEBOOK PROJECT DEMO_DB.PUBLIC.CARBON_EMISSIONS_PROJECT
 SELECT * FROM EMISSIONS_RESULTS ORDER BY EXECUTION_TIMESTAMP DESC;
 ```
 
-## Pip Install Options
+## Package Management
 
-**Two ways to install packages:**
+**Two approaches for installing Python packages** ([official docs](https://docs.snowflake.com/en/developer-guide/snowflake-ml/container-runtime-package-management)):
 
-1. **In-notebook (Cell 1)**: Runs `pip install` in the notebook itself
-   - Good for development
-   - Installs every time notebook runs
+1. **Interactive development (Cell 1)**: Use `!pip install <package>` directly in notebook cells
+   - Great for trying out new packages
+   - Runs each time the notebook executes
+   - Example: `!pip install tabulate`
    
-2. **REQUIREMENTS_FILE parameter**: References a requirements.txt file
-   - Better for production
-   - Installs once at container startup
-   - Faster for repeated runs
+2. **Production execution (REQUIREMENTS_FILE)**: Reference a requirements.txt file
+   - Pre-installs packages at container startup
+   - More reliable for scheduled/automated runs
+   - Faster since packages are cached
+   - Used automatically with `EXECUTE NOTEBOOK PROJECT`
+
+**Note**: Requires an External Access Integration for PyPI or Artifact Repository enabled.
 
 ## Demo Flow
 
