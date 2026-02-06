@@ -1,5 +1,7 @@
 -- Scheduled Task Example
--- Update <YOUR_WORKSPACE_HASH> with your workspace hash
+-- Update <YOUR_WORKSPACE_HASH> with your workspace hash from the notebook file path
+-- Example: If notebook path is snow://workspace/ABC123/carbon_emissions_calculator.ipynb
+--          then YOUR_WORKSPACE_HASH = ABC123
 
 USE DATABASE DEMO_DB;
 USE SCHEMA PUBLIC;

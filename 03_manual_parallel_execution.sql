@@ -1,5 +1,7 @@
 -- Manual Parallel Execution Demo
--- Update <YOUR_WORKSPACE_HASH> with your workspace hash
+-- Update <YOUR_WORKSPACE_HASH> with your workspace hash from the notebook file path
+-- Example: If notebook path is snow://workspace/ABC123/carbon_emissions_calculator.ipynb
+--          then YOUR_WORKSPACE_HASH = ABC123
 -- Open 2 worksheets and run both commands at the same time
 
 USE DATABASE DEMO_DB;
