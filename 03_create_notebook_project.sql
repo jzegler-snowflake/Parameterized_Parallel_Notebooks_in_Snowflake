@@ -1,0 +1,10 @@
+-- Create Notebook Project
+-- Run after setting up the notebook from Git
+
+USE DATABASE DEMO_DB;
+USE SCHEMA PUBLIC;
+
+CREATE OR REPLACE NOTEBOOK PROJECT CARBON_EMISSIONS_PROJECT
+  COMMENT = 'Parameterized emissions calculator';
+
+SHOW NOTEBOOK PROJECTS LIKE 'CARBON_EMISSIONS_PROJECT';

@@ -1,0 +1,6 @@
+# Python dependencies for carbon emissions notebook
+# Use with: REQUIREMENTS_FILE = 'requirements.txt'
+
+pandas==2.1.4
+numpy==1.24.3
+snowflake-snowpark-python==1.11.1
