@@ -52,7 +52,7 @@ EXECUTE NOTEBOOK PROJECT DEMO_DB.PUBLIC.CARBON_EMISSIONS_PROJECT
   RUNTIME = 'V2.2-CPU-PY3.11'
   ARGUMENTS = 'TechCorp'
   REQUIREMENTS_FILE = 'snow://workspace/<YOUR_HASH>/requirements.txt'
-  EXTERNAL_ACCESS_INTEGRATIONS = ('ALLOW_ALL_INTEGRATION');
+  EXTERNAL_ACCESS_INTEGRATIONS = ('MLOPS_PYPI_ACCESS_INTEGRATION');
 
 -- Verify results
 SELECT * FROM EMISSIONS_RESULTS ORDER BY EXECUTION_TIMESTAMP DESC;
@@ -148,3 +148,4 @@ SELECT 'Parallel (actual)', MAX(t) FROM recent;
 
 - [EXECUTE NOTEBOOK PROJECT](https://docs.snowflake.com/en/sql-reference/sql/execute-notebook-project)
 - [CREATE NOTEBOOK PROJECT](https://docs.snowflake.com/en/sql-reference/sql/create-notebook-project)
+- [Container Runtime Package Management](https://docs.snowflake.com/en/developer-guide/snowflake-ml/container-runtime-package-management)

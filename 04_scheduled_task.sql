@@ -15,7 +15,7 @@ AS
     RUNTIME = 'V2.2-CPU-PY3.11'
     ARGUMENTS = 'TechCorp'
     REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
-    EXTERNAL_ACCESS_INTEGRATIONS = ('ALLOW_ALL_INTEGRATION');
+    EXTERNAL_ACCESS_INTEGRATIONS = ('MLOPS_PYPI_ACCESS_INTEGRATION');
 
 -- Alternative: One task per company
 
@@ -31,7 +31,7 @@ AS
     RUNTIME = 'V2.2-CPU-PY3.11'
     ARGUMENTS = 'TechCorp'
     REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
-    EXTERNAL_ACCESS_INTEGRATIONS = ('ALLOW_ALL_INTEGRATION');
+    EXTERNAL_ACCESS_INTEGRATIONS = ('MLOPS_PYPI_ACCESS_INTEGRATION');
 
 CREATE OR REPLACE TASK CARBON_EMISSIONS_MANUFACTURECO
   WAREHOUSE = CONTAINER_RUNTIME_WH
@@ -45,7 +45,7 @@ AS
     RUNTIME = 'V2.2-CPU-PY3.11'
     ARGUMENTS = 'ManufactureCo'
     REQUIREMENTS_FILE = 'snow://workspace/USER$.PUBLIC."Parameterized_Parallel_Notebooks_in_Snowflake"/versions/head/requirements.txt'
-    EXTERNAL_ACCESS_INTEGRATIONS = ('ALLOW_ALL_INTEGRATION');
+    EXTERNAL_ACCESS_INTEGRATIONS = ('MLOPS_PYPI_ACCESS_INTEGRATION');
 
 -- Resume to activate (tasks start as SUSPENDED)
 -- ALTER TASK CARBON_EMISSIONS_DAILY_TASK RESUME;
